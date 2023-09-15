@@ -1,0 +1,55 @@
+// let master='color_box'
+
+// let addons={
+//     'color_box':['purar-air-mask-classic','sienna','ayesha-curry-adult-aprons'],
+//     'sienna':['color_box','ayesha-curry-adult-aprons']
+// }
+
+// `https://afzal-test-shop.myshopify.com/products/${master}.json`
+
+// test cases :
+
+// c-1 master : 'color-box',
+//     solution : color_box will be visible as master product, and related children should be there in the right side
+
+// c-2 master : sienna - //// same as before
+
+//     Note: don't write code as dynamic, we will update addons object as well as master
+
+// //-------------------------------------------------------------------------------------------------//
+// const container = document.querySelector("#main");
+// const createElement = function (element, innerHTML, attributes) {
+//   let newElement = document.createElement(element);
+//   newElement.innerHTML = innerHTML;
+//   for (const [attrName, attrValue] of Object.entries(attributes)) {
+//     newElement.setAttribute(attrName, attrValue);
+//   }
+//   return newElement;
+// };
+
+// let master = "color_box";
+// let addons = {
+//   color_box: ["purar-air-mask-classic", "sienna", "ayesha-curry-adult-aprons"],
+//   sienna: ["color_box", "ayesha-curry-adult-aprons"],
+// };
+// async function fetchProductImages() {
+//   try {
+//     const response = await fetch(`https://afzal-test-shop.myshopify.com/products/${master}.json`);
+//     if (!response.ok) {
+//       throw new Error(`Failed to fetch product JSON. Status: ${response.status}`);
+//     }
+//     const productData = await response.json();
+//     // Extract image URLs from the product and addons
+
+//     const imgUrls = productData.product.images.map((photo) => photo.src);
+//     imgUrls.forEach((pic) => {
+//       const image = createElement("img", "", { src: `${pic}` });
+//       container.appendChild(image);
+//       image.style.width = "250px";
+//     });
+//     console.log(imgUrls);
+//   } catch (error) {
+//     console.error("Error:", error);
+//   }
+// }
+// fetchProductImages();
